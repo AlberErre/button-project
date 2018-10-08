@@ -1,3 +1,31 @@
-.container {
+.mainContainer {
     background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-direction: column;
 }
+
+.dice{
+    border: solid 3px #aaa;
+    border-radius: 7px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 60px;
+    color: aqua;
+  }
+  
+  .button{
+    border: solid 3px #aaa;
+    border-radius: 4px;
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 7px auto;
+    text-align: center;
+    font-size: 18px;
+  }

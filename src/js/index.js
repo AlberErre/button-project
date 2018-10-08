@@ -11,21 +11,20 @@ let randomNumber = () => {
   let number = Math.round( (Math.random() * 5 ) + 1);
   PastLaunches.push(number);
   dice.innerHTML = number;
-  records.innerHTML = snarkdown(PastLaunches);
+  records.innerHTML = PastLaunches;
 }
 
-/*
 let showRecords = () => {
 
-    let str = "<table>"
+    let str = "<table>";
 
     for (let i = 0; i < PastLaunches.length; i++) {
-        str += "<tr><td colspan=\"2\">" + PastLaunches[i] + "</td></tr>";
+        str = str + "<tr><td>" + PastLaunches[i] + "</td></tr>";
     }
 
-    str += "</table>";
+    str = str + "</table>";
+
 }
-*/
 
 button.onclick = () => randomNumber();
 

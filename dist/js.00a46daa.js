@@ -252,21 +252,18 @@ var randomNumber = function randomNumber() {
   var number = Math.round(Math.random() * 5 + 1);
   PastLaunches.push(number);
   dice.innerHTML = number;
-  records.innerHTML = (0, _snarkdown.default)(PastLaunches);
+  records.innerHTML = PastLaunches;
 };
-/*
-let showRecords = () => {
 
-    let str = "<table>"
+var showRecords = function showRecords() {
+  var str = "<table>";
 
-    for (let i = 0; i < PastLaunches.length; i++) {
-        str += "<tr><td colspan=\"2\">" + PastLaunches[i] + "</td></tr>";
-    }
+  for (var i = 0; i < PastLaunches.length; i++) {
+    str = str + "<tr><td>" + PastLaunches[i] + "</td></tr>";
+  }
 
-    str += "</table>";
-}
-*/
-
+  str = str + "</table>";
+};
 
 button.onclick = function () {
   return randomNumber();

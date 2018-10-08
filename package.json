@@ -17,5 +17,8 @@
     "postcss-font-magician": "^2.2.1",
     "postcss-mixins": "^6.2.0",
     "postcss-preset-env": "^6.0.7"
+  },
+  "dependencies": {
+    "snarkdown": "^1.2.2"
   }
 }

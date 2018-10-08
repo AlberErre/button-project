@@ -107,10 +107,14 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"js/index.js":[function(require,module,exports) {
 var dice = document.getElementById("dice");
 var button = document.getElementById("button");
+var records = document.getElementById("records");
+var PastLaunches = [];
 
 var randomNumber = function randomNumber() {
-  var number = Math.floor(Math.random() * 5 + 1);
+  var number = Math.round(Math.random() * 5 + 1);
+  PastLaunches.push(number);
   dice.innerHTML = number;
+  records.innerHTML = PastLaunches;
 };
 
 button.onclick = function () {

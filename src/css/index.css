@@ -12,12 +12,32 @@
     border-radius: 7px;
     width: 200px;
     height: 200px;
-    margin: auto;
-    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
     padding: 10px;
     text-align: center;
     font-size: 10em;
-  }
+}
+
+.records {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border: solid 3px #aaa;
+    border-radius: 4px;
+    display: block;
+    width: 120px;
+    height: 55px;
+    margin: 7px auto;
+    text-align: center;
+    font-size: 18px;
+    outline: none;
+}
 
 .button:hover {
     color: #fff;
@@ -31,18 +51,6 @@
       }
 }
   
-.button {
-    border: solid 3px #aaa;
-    border-radius: 4px;
-    display: block;
-    width: 120px;
-    height: 55px;
-    margin: 7px auto;
-    text-align: center;
-    font-size: 18px;
-    outline: none;
-}
-
 @keyframes boing {
     15%, 40%, 75%, 100% {
         transform-origin: center center;

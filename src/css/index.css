@@ -3,29 +3,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 25vh;
     flex-direction: column;
 }
 
-.dice{
+.dice {
     border: solid 3px #aaa;
     border-radius: 7px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     margin: auto;
+    margin-top: 10vh;
     padding: 10px;
     text-align: center;
-    font-size: 60px;
-    color: aqua;
+    font-size: 10em;
   }
+
+.button:hover {
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    animation: boing 300ms ease-in-out;
+
+    &.blue {
+        background-color: #4a79f1;
+        border: 1px solid darken(#4a79f1, 15%);
+      }
+}
   
-  .button{
+.button {
     border: solid 3px #aaa;
     border-radius: 4px;
     display: block;
-    width: 100px;
-    height: 35px;
+    width: 120px;
+    height: 55px;
     margin: 7px auto;
     text-align: center;
     font-size: 18px;
+    outline: none;
+}
+
+@keyframes boing {
+    15%, 40%, 75%, 100% {
+        transform-origin: center center;
+    }
+    15% {
+        transform: scale(1.2, 1.1);
+    }
+    40% {
+        transform: scale(0.95, 0.95);
+    }
+    75% {
+        transform: scale(1.05, 1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
   }

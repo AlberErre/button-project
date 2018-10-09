@@ -246,13 +246,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var dice = document.getElementById("dice");
 var button = document.getElementById("button");
 var records = document.getElementById("records");
+var mean = document.getElementById("mean");
 var PastLaunches = [];
+var meanValue;
 
 var randomNumber = function randomNumber() {
   var number = Math.round(Math.random() * 5 + 1);
   PastLaunches.push(number);
   dice.innerHTML = number;
   records.innerHTML = PastLaunches;
+  calculateMean;
+  mean.innerHTML = meanValue;
+};
+
+var calculateMean = function calculateMean() {
+  var sum = 0;
+
+  for (var i = 0; i < PastLaunches.length; i++) {
+    sum = sum + PastLaunches[i];
+  }
+
+  meanValue = sum / PastLaunches.length;
 };
 
 var showRecords = function showRecords() {
@@ -295,7 +309,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36751" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44499" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

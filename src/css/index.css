@@ -7,6 +7,13 @@
     flex-direction: column;
 }
 
+.innerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
 .dice {
     border: solid 3px #aaa;
     border-radius: 7px;
@@ -49,6 +56,10 @@
         background-color: #4a79f1;
         border: 1px solid darken(#4a79f1, 15%);
       }
+}
+
+.button:focus + .dice {
+    animation: boing 400ms ease-in-out;
 }
   
 @keyframes boing {

@@ -15,8 +15,7 @@ let randomNumber = () => {
   PastLaunches.push(number);
   dice.innerHTML = number;
   records.innerHTML = PastLaunches;
-  calculateMean;
-  mean.innerHTML = meanValue;
+  mean.innerHTML = calculateMean();
 
 }
 
@@ -28,6 +27,7 @@ let calculateMean = () => {
     }
 
     meanValue = sum/PastLaunches.length;
+    return meanValue;
 }
 
 let showRecords = () => {
